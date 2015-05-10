@@ -62,12 +62,15 @@ This means that the change in the infrastructure and the product can come from a
 <p>Accordance is a system that tracks the run-time dependencies of the components. The same way the POM for Maven and Gemfile for Ruby track the build-time dependencies, Accordance tracks the run-time dependencies of the components and services.</p>
 <p>This system provides automation and safety nets, but it’s not magic and it heavily relies on people providing truthful information. If people go around the system then the information in the system becomes irrelevant and less trusted by the organization. So, in a sense, it’s a chicken-and-egg problem: the more you rely on the system the more incentivized you are to feed it with the right data. Unfortunately the opposite is true as well: the less reliable data is in the system the less people will use it.</p>
 
-
-<pre><code>  example
-  will
-  be
-  here
-</code></pre>
+<p>Accordance, for the moment, attempts to solve the following use cases:<p>
+<ul>
+  <li>Expose applications and components dependencies and treat them as first class citizens via <a href="https://github.com/Accordance/accordance.github.io/wiki/BillOfMaterials">BoM (Bill-of-Materials).</a></li>
+  <li>Understand the topology of the environments and <a href="https://github.com/Accordance/accordance.github.io/wiki/Graph-of-Relationships">their relationships</a>.</li>
+  <li>Track the graph of dependencies of the applications and ensure that the graph is always valid: i.e. the deployment of any application or a change in the system is validated against the graph. If, at any moment, the graph can't be reconciled - <a href="https://github.com/Accordance/accordance.github.io/wiki/Change-Locks">the change is rejected</a>.</li>
+  <li><a href="https://github.com/Accordance/accordance.github.io/wiki/Janus-(Change-Management)"</a>Track the changes</a> in the environments (ideally via integration with other change management systems).</li>
+  <li>Facilitate the communication between the components' owners.</li>
+  <li>Build test and sand-box environment graphs for testing of the sub-systems.</li>
+</ul>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
